@@ -245,9 +245,10 @@ i {
   color: var(--sub-text-color, #3b3e4d);
 }
 
+.uni .row-2 .degree-school .school .text,
 .course-text {
+  font-weight: 600;
   font-size: 12px;
-  font-weight: 500;
 }
 
 .icon__partnership {
