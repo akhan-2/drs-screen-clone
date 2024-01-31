@@ -91,7 +91,6 @@ i {
 .no_reco_message {
   height: 190px;
   background-color: var(--color-gray-50, #f9f9fc);
-  width: 100%;
   padding-inline: 2rem;
   gap: 8px;
   color: var(--sub-text-color, #3b3e4d);
