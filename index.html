@@ -15,24 +15,37 @@
       rel="stylesheet"
       href="https://cdn.ischoolconnect.com/fonts/isc/v3.3.0/isc-icons.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla"
+      rel="stylesheet"
+    />
     <title>Drs screen</title>
   </head>
   <body class="overflow-y-scroll">
-    <article class="drs_report_screen table-screen content">
-      <header class="parent-header">
-        <div class="text-content">
+    <article
+      class="drs_report_screen table-screen content w-full min-h-full max-h-full overflow-y-auto flex flex-col overflow-hidden"
+    >
+      <header
+        class="parent-header w-full flex flex-wrap justify-between items-center"
+      >
+        <div class="text-content flex flex-col items-baseline">
           <h2 class="reco-title">Recommendations</h2>
           <p class="reco-subtitle">Provide recommendations to your students.</p>
         </div>
-
         <button class="flex my-1" id="refine_profile_button">
           Refine Profile
         </button>
       </header>
 
-      <section class="drs_report__container">
-        <div class="card-container">
-          <header class="header">
+      <section class="drs_report__container flex flex-col">
+        <div class="card-container w-full flex flex-col">
+          <header class="header flex justify-between">
             <div class="header-left">
               <!-- ICON -->
               <img
@@ -73,7 +86,9 @@
                   </div>
                   <!-- Text -->
                   <section class="text">
-                    <header class="name-parent-div">
+                    <header
+                      class="name-parent-div flex items-end text-ellipsis"
+                    >
                       <h4 class="name">Long Island University</h4>
                       <i class="isc-partner | icon__partnership"></i>
                     </header>
@@ -96,13 +111,13 @@
                   <div class="degree-school">
                     <h6 class="degree truncate flex" #degree>
                       <i class="isc-degree primary-text ltr:mr-1 rtl:ml-1"></i
-                      ><span class="text block" #degreeNameSpan
+                      ><span class="text course-text block" #degreeNameSpan
                         >Post Graduate Diploma</span
                       >
                     </h6>
                     <h6 class="school truncate flex" #school>
                       <i class="isc-school primary-text ltr:mr-1 rtl:ml-1"></i
-                      ><span class="text block" #schoolNameSpan
+                      ><span class="text course-text block" #schoolNameSpan
                         >School of Business, IT and Management</span
                       >
                     </h6>
@@ -170,7 +185,9 @@
                   </div>
                   <!-- Text -->
                   <section class="text">
-                    <header class="name-parent-div">
+                    <header
+                      class="name-parent-div flex items-end text-ellipsis"
+                    >
                       <h4 class="name">Long Island University</h4>
                       <i class="isc-partner | icon__partnership"></i>
                     </header>
@@ -193,13 +210,13 @@
                   <div class="degree-school">
                     <h6 class="degree truncate flex" #degree>
                       <i class="isc-degree primary-text ltr:mr-1 rtl:ml-1"></i
-                      ><span class="text block" #degreeNameSpan
+                      ><span class="text course-text block" #degreeNameSpan
                         >Post Graduate Diploma</span
                       >
                     </h6>
                     <h6 class="school truncate flex" #school>
                       <i class="isc-school primary-text ltr:mr-1 rtl:ml-1"></i
-                      ><span class="text block" #schoolNameSpan
+                      ><span class="text block course-text" #schoolNameSpan
                         >School of Business, IT and Management</span
                       >
                     </h6>
@@ -248,7 +265,9 @@
               class="cdk-drop-list university-wrapper | scrollbar"
               id="safe"
             >
-              <div class="no_reco_message">
+              <div
+                class="no_reco_message flex flex-col justify-center items-center text-center"
+              >
                 <h4 class="title">No Recommendations!</h4>
                 <p class="description">
                   Sorry! We couldn't find enough recommendations under this
