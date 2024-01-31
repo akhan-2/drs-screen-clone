@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-gray-200: #dde2e7;
+  --tw-border-opacity: 1;
+  --color-gray-100: hsla(0, 0%, 90%, 1);
+  --tw-text-opacity: 1;
+  --color-gray-50: hsl(206, 54%, 97%);
+  --theme-color: rgb(10, 164, 247);
+  --red: 10;
+  --green: 164;
+  --blue: 247;
+  --isc-widget-chat-primary-color: rgb(10, 164, 247);
+  --color-gray-50: hsl(206, 54%, 97%);
+}
+
+@font-face {
+  font-display: block;
+  font-family: isc-icons;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cdn.ischoolconnect.com/fonts/isc/v3.3.0/isc-icons.eot?o2l4yh);
+  src: url(https://cdn.ischoolconnect.com/fonts/isc/v3.3.0/isc-icons.eot?o2l4yh#iefix)
+      format("embedded-opentype"),
+    url(https://cdn.ischoolconnect.com/fonts/isc/v3.3.0/isc-icons.ttf?o2l4yh)
+      format("truetype"),
+    url(https://cdn.ischoolconnect.com/fonts/isc/v3.3.0/isc-icons.woff?o2l4yh)
+      format("woff"),
+    url(https://cdn.ischoolconnect.com/fonts/isc/v3.3.0/isc-icons.svg?o2l4yh#isc-icons)
+      format("svg");
+}
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "isc-icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* drs report screen start */
+
+.drs_report_screen .table-screen {
+  max-height: unset;
+}
+
+.content {
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 100%, 1);
+  border-color: rgba(245, 249, 252, var(--tw-border-opacity));
+  scrollbar-width: none;
+  border-radius: 0rem;
+  overflow: hidden;
+}
+
+.parent-header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--color-gray-100);
+  padding: 0.5rem 1rem;
+  padding-left: 10px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.reco-title {
+  color: rgba(43, 45, 56, var(--tw-text-opacity));
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.reco-subtitle {
+  font-family: Karla;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(59, 62, 77, var(--tw-text-opacity));
+}
+
+.drs_report__container {
+  padding-inline: 10px;
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.no_reco_message {
+  height: 190px;
+  background-color: var(--color-gray-50, #f9f9fc);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding-inline: 2rem;
+  gap: 8px;
+  color: var(--sub-text-color, #3b3e4d);
+}
+
+.no_reco_message .description {
+  font-family: var(--font-body);
+}
+
+.no_reco_message .title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* drs report screen end */
+
+/* card container start */
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-container .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container .header .header-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 8px;
+  width: 60%;
+}
+
+.card-container .header .header-left .header__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container .header .header-left .header__text .title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.card-container .header .header-left .header__text .title .sub-title {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.text-dream {
+  color: #414099;
+}
+
+.text-reach {
+  color: #fdc24c;
+}
+
+.text-safe {
+  color: #60c2ac;
+}
+
+#refine_profile_button {
+  --theme-color: rgb(10, 164, 247);
+  background-color: var(--theme-color);
+  color: white;
+  box-shadow: 0 0 #0003, 0 0 #00000024, 0 0 #0000001f;
+  border-color: #0000001f;
+  border: 1px solid --theme-color;
+  padding: 0 15px;
+  line-height: 34px;
+}
+
+.card-view {
+  -webkit-animation: transitionIn 0.5s;
+  animation: transitionIn 0.5s;
+  font-size: 13px;
+}
+
+.university-wrapper {
+  width: 100%;
+  border-radius: 4px;
+  overflow: auto;
+  background-color: #f5f9fc;
+  background-color: var(--color-gray-50, #f5f9fc);
+  position: relative;
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  padding-block: 24px;
+  padding-inline: 5px;
+}
+
+.uni-card {
+  min-width: 400px !important;
+  justify-content: space-between;
+}
+
+.card,
+.uni,
+.button__add_university {
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 16px;
+}
+
+.uni .drs_card__header {
+  display: grid;
+  grid-template-columns: 56px auto;
+  grid-gap: 8px;
+  gap: 8px;
+}
+
+.uni {
+  min-width: 218px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  border: 1px solid var(--color-gray-100);
+  position: relative;
+  cursor: pointer;
+  max-width: 25rem;
+  overflow: hidden;
+}
+
+.uni .row-1,
+.drs_card__header {
+  display: grid;
+  grid-template-columns: 56px auto;
+  gap: 8px;
+}
+
+.logo {
+  width: 56px;
+
+  img {
+    object-fit: contain;
+    border-radius: 99999px;
+  }
+}
+
+.text {
+  --sub-text-color: rgb(59, 62, 77);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  color: var(--sub-text-color, #3b3e4d);
+}
+
+.icon__partnership {
+  font-size: 30px;
+  color: #feb737;
+}
+
+.name-parent-div {
+  display: flex;
+  align-items: flex-end;
+  max-width: 150px;
+  text-overflow: ellipsis;
+}
+
+.city-state-parent-div {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 61vw;
+}
+
+.city-state-parent-div .cityStateDiv .city {
+  width: 15ch;
+  word-break: break-word;
+}
+
+.city::before {
+  font-family: var(--font-icons, "isc-icons");
+  content: "\e9c2";
+  margin-inline-end: 4px;
+  color: var(--color-gray-200);
+}
+
+.country::before {
+  content: "\2022";
+  text-align: center;
+  font-size: xxx-large;
+  vertical-align: text-top;
+  line-height: 10px;
+  color: var(--color-gray-200);
+  margin-inline-end: 4px;
+}
+
+.row-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 4px;
+  gap: 4px;
+  background-color: var(--color-gray-50);
+  border: 1px solid var(--color-gray-100);
+  padding: 8px;
+  width: 100%;
+  line-height: 1.4;
+}
+
+.degree-school {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.degree-school .degree .school .text {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.uni .row-2 .degree-school .school,
+.uni .row-2 .degree-school .degree {
+  align-items: flex-start;
+  width: 100%;
+  gap: 8px;
+}
+.degree {
+  align-items: flex-start;
+  width: 100%;
+  gap: 8px;
+}
+
+.primary-text {
+  color: #00aff0;
+  color: rgb(var(--red), var(--green), var(--blue));
+  transition: all 0.1s linear;
+}
+
+.drs_card__footer {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.name {
+  font-weight: 600;
+  width: min(100%, 20ch);
+}
+
+.city,
+.country {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.stroked-button {
+  width: fit-content;
+  box-shadow: 0 0 #0003, 0 0 #00000024, 0 0 #0000001f;
+  border-color: #0000001f;
+  border: 1px solid #0000001f !important;
+  padding: 0 15px;
+  line-height: 34px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.flat-button {
+  width: fit-content;
+
+  background-color: var(--theme-color) !important;
+  border: 1px solid transparent;
+  box-shadow: 0 0 #0003, 0 0 #00000024, 0 0 #0000001f;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.shortlist-icon {
+  margin-right: 5px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  color: #2c405a;
+}
+
+.shortlisted {
+  color: #fa4a5b;
+}
+
+/* card container end */
+
+@media (min-width: 768px) {
+  .uni {
+    min-width: 25rem;
+  }
+  .name {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+  .city-state-parent-div {
+    width: 100%;
+  }
+}
+
+@media (min-width: 620px) {
+  .uni .card {
+    min-width: 400px;
+  }
+}
+
+@media (min-width: 694px) {
+  .card-view {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .content {
+    border-radius: 0.25rem;
+  }
+  .reco-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: 620px) {
+  .parent-header {
+    padding-left: 30px;
+  }
+  .drs_report__container {
+    padding-inline: 32px;
+  }
+  .name-parent-div {
+    max-width: fit-content;
+  }
+}
+
+@media (min-width: 400px) {
+  .drs_card__footer {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .uni:hover {
+    &.dream {
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.22), 0px 2px 0px #414099;
+    }
+
+    &.reach {
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.22), 0px 2px 0px #fdc24c;
+    }
+
+    &.safe {
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.22), 0px 2px 0px #60c2ac;
+    }
+  }
+}
